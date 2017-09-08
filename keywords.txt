@@ -1,0 +1,24 @@
+###########################################
+# Syntax Coloring Map For HP03S-library
+###########################################
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+
+HP03S	KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+
+begin KEYWORD2
+printParameters KEYWORD2
+printAllValues KEYWORD2
+measure KEYWORD2
+measureTemperature KEYWORD2
+measurePressure KEYWORD2
+getTemperature KEYWORD2
+getPressure KEYWORD2
+getPressureAtSeaLevel KEYWORD2
+
