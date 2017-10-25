@@ -6,7 +6,7 @@ An Arduino-library for the HP03S sensor.
 
 ## Support
 This library supports Arduino UNO, ESP8266 and propably some other Atmel-controllers.
-It's tested on the ESP8266
+It's tested on the ESP8266.
 
 
 ## Quick-Start
@@ -55,7 +55,7 @@ void setup()
 }
 ```
 
-The XCLR-pin is a digital output and the MCLK-pin has to be a PWM-pin. On Arduino UNO You need to use the pins 9 or 10.
+The XCLR-pin is a digital output and the MCLK-pin has to be a PWM-pin if You are using the ESP8266.
 
 ### .measure()
 The measure-method measures and stores the response from the sensor. It has no return value, it just (re)measures.
@@ -68,8 +68,3 @@ This method returns the temperature from the last `.measure()`-call. It returns 
 
 ### .getPressureAtSeaLevel(height)
 This method calculates the pressure at the sea-level, therefor it uses the height in meter as argument. The pressure at sea-level is usually used in weather-forecasts, its standart-value is 1013.25hPa.
-
-
-### Adding support for other MCUs
-The main problem is that there is no standart-function for generating a 32.768 kHz pulse in the Arduino-IDE that's needed for the sensor.
-The ESP8266-core has such a function (`analogWriteFreq(freq)`). On the Arduino UNO I set the TCCR1B-timer-register.
