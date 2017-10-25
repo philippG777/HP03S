@@ -16,7 +16,21 @@ void HP03S::begin()
     // init pins
     pinMode(_xclr, OUTPUT);
     pinMode(_mclk, OUTPUT);
+#if defined(__AVR__)
+
+    if (_mclk == 9 || _mclk == 10)
+    {
+        TCCR1B = TCCR1B & 0b11111001;
+    }
+    else
+    {
+        Serial.println("Use the pins 9 or 10 for master-clock");
+    }
+
+#elif defined(ESP8266)
     analogWriteFreq(32768); // set freq of pwm to 32.768 kHz
+#endif
+
     _setMasterClock(false);
     _getParameters();
 }
