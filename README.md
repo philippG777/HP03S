@@ -43,8 +43,17 @@ void loop()
 ```
 
 
+## Installation
+### Arduino Library-Manager
+In the Arduino-IDE select **Sketch > Include Library > Manage Libraries**. In the library manager type **HP03S** and click the resulting library to install it. The library will be available after restarting the Arduino IDE.
 
-## API
+
+### Installing manually
+Download the .zip-file from the [latest release](https://github.com/philippG777/HP03S/releases/latest), place it in **<Your-Arduino-projects-folder>/libraries/** and extract it.
+Create the libraries-folder if it does not exist. The library will be available after restarting the Arduino IDE.
+
+
+## API Documentation
 ### Init
 ```C++
 HP03S hp03s(XCLR, MCLK);
